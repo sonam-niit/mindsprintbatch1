@@ -1,0 +1,71 @@
+First We created one volume: EBS
+	created one volume with size 16GB
+	sperate volume which I can use for 1 instance as well as multiple instances
+	
+	while creating volume make sure you select proper zone
+
+2. attach the volume to your instance so basically we are increasing the size of our instance
+
+	select volume --> actions --> attach volume --> select instance --> give the device name like /dev/sdb etc..
+
+3. I want to see this attached volume 
+
+	open instance and check in storage direct one
+
+4. How to open it and check it in aws Linux console?
+
+	open instance --> connect -->  in cmd
+
+	1. lsblk : to see all volumes available to your running instance
+	
+	2. how to see the particular volume is empty or not: sudo file -s /dev/xvda
+		(if its showing data means its empty directory)
+
+	3. let's mount some folder to your volume
+
+		sudo mkdire /hello
+		sudo mount /dev/xvda /hello
+		(if it is mounted successfully you can check)
+		lsblk
+
+		(you can see that folder attached to that particular volume)
+
+	4. for unmount:
+                       sudo umount /data
+
+	(once the attachment was done reboot instance for mounting some directories)
+======================================================================================================================
+
+SNAPSHOT: Backup of our data
+
+1. how to take it
+
+	to to snapshots --> create snapshot
+
+	give the volume size --> select volume name and then in tag add Name --- snapshot1 
+
+2. once the snapshot take you can take Restore it by creating volume
+
+	select snapid and create volume.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
