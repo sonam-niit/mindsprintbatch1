@@ -1,0 +1,17 @@
+--Navigate to the directory containing your .pem file.
+
+--Right-click the .pem file and select Properties.
+
+--Go to the Security tab.
+
+--Click Advanced.
+
+--Click Disable inheritance, then select Remove all inherited permissions from this object.
+
+--Click Add, then Select a principal.
+
+--Type your Windows username and click Check Names, then click OK.
+
+--In the Permissions window, check Full control and click OK.
+
+--Click Apply, then OK.

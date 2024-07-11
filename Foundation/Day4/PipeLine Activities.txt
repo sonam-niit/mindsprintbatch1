@@ -1,0 +1,204 @@
+Activity 1: Simple Shell Commands
+-----------------------------------------
+pipeline {
+    agent any
+
+    stages {
+        stage('Print Date') {
+            steps {
+                sh 'date'
+            }
+        }
+        stage('Print Working Directory') {
+            steps {
+                sh 'pwd'
+            }
+        }
+        stage('List Files') {
+            steps {
+                sh 'ls -lah'
+            }
+        }
+        stage('End') {
+            steps {
+                echo 'Shell commands execution complete.'
+            }
+        }
+    }
+}
+
+==============================================================================================
+Activity 2: Environment Variables
+
+pipeline {
+    agent any
+
+    environment {
+        GREETING = 'Hello'
+        NAME = 'World'
+    }
+
+    stages {
+        stage('Print Greeting') {
+            steps {
+                echo "${env.GREETING}, ${env.NAME}!"
+            }
+        }
+        
+        stage('End') {
+            steps {
+                echo 'Environment variables demonstration complete.'
+            }
+        }
+    }
+}
+
+----------------------------------------------------------------------------------------------
+
+Activity 3: Conditional Execution
+
+pipeline {
+    agent any
+
+    environment {
+        RUN_STAGE = 'true'
+    }
+
+    stages {
+        stage('Conditional Stage') {
+            when {
+                environment name: 'RUN_STAGE', value: 'true'
+            }
+            steps {
+                echo 'This stage runs because RUN_STAGE is true.'
+            }
+        }
+        stage('Always Run') {
+            steps {
+                echo 'This stage always runs.'
+            }
+        }
+        stage('End') {
+            steps {
+                echo 'Conditional execution demonstration complete.'
+            }
+        }
+    }
+}
+
+========================================================================================================
+
+Activity 4: Parallel Stages
+
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Parallel Execution') {
+            parallel {
+                stage('Stage 1') {
+                    steps {
+                        echo 'Running Stage 1'
+                    }
+                }
+                stage('Stage 2') {
+                    steps {
+                        echo 'Running Stage 2'
+                    }
+                }
+            }
+        }
+        stage('End') {
+            steps {
+                echo 'Parallel stages demonstration complete.'
+            }
+        }
+    }
+}
+
+=======================================================================================
+
+Activity 5: Basic Arithmetic and Error Handling
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Arithmetic') {
+            steps {
+                script {
+                    int a = 10
+                    int b = 5
+                    int sum = a + b
+                    echo "Sum: ${sum}"
+                    int diff = a - b
+                    echo "Difference: ${diff}"
+                    int prod = a * b
+                    echo "Product: ${prod}"
+                    try {
+                        int quotient = a / b
+                        echo "Quotient: ${quotient}"
+                    } catch (Exception e) {
+                        echo "Error: Division by zero is not allowed."
+                    }
+                }
+            }
+        }
+        stage('End') {
+            steps {
+                echo 'Arithmetic operations and error handling complete.'
+            }
+        }
+    }
+}
+
+===========================================================================================
+List All Environment Variables
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello, World!'
+            }
+        }
+        stage('Environment') {
+            steps {
+                script {
+                    def envVars = env.getEnvironment()
+                    for (envVar in envVars) {
+                        echo "${envVar.key} = ${envVar.value}"
+                    }
+                }
+            }
+        }
+        stage('List Files') {
+            steps {
+                sh 'ls -lah'
+            }
+        }
+        stage('End') {
+            steps {
+                echo 'Pipeline execution complete.'
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
