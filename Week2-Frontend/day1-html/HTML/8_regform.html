@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<body>
+    <h1>Registration Form</h1> <hr>
+    <form>
+        <label>First Name</label>
+        <input type="text" placeholder="First Name" name="fname" required/><br><br>
+        <label>Last Name</label>
+        <input type="text" placeholder="Last Name" name="lname" required/><br><br>
+        <label>Email Id</label>
+        <input type="email" placeholder="john.doe@gmail.com" name="email" required/><br><br>
+        <label>Date of Birth</label>
+        <input type="date" name="dob" required/><br><br>
+        <label>Favourite Color:</label>
+        <input type="color" name="color" value="#00ff00"/><br><br>
+        <label>Select Languages:</label>
+        <input type="checkbox" value="en" checked>English
+        <input type="checkbox" value="hn">Hindi
+        <input type="checkbox" value="fr">Fench <br><br>
+        <label>Gender</label>
+        <input type="radio" value="m" name="gender"/>Male
+        <input type="radio" value="f" name="gender"/>Female
+        <input type="radio" value="o" name="gender"/>Other
+        <br><br>
+        <label>Courses</label>
+        <select>
+            <option value="HTML">HTML</option>
+            <option value="css">CSS</option>
+            <option value="JS">JavaScript</option>
+            <option value="sql">SQL</option>
+        </select> <br><br>
+        <label>Age:</label>
+        <input type="number" name="age" min="18" max="55"> <br><br>
+        <label>Upload Profile</label>
+        <input type="file" name="profile"> <br><br>
+        <label>Range</label>
+        <input type="range" value="60" min="0" max="100">
+        <br><br>
+        <label>Password:</label>
+        <input type="password" name="pass" minlength="6" required><br><br>
+        <label>Message:</label>
+        <textarea rows="5" cols="30"></textarea> <br><br>
+        <input type="submit" value="Register">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
