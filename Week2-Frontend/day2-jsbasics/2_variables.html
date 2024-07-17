@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num; //variable declaration
+        num=20; //assigning a value to variables
+        //assign + declaration together
+        var data= 78; //number
+        var name = "Sonam Soni"; //string
+        var test = 67>90; //false -- boolean
+        var x; // no value means undefined
+        
+        //print values in browser
+        //String concatation
+        document.write("<h3>Data is "+data+"</h3>");
+        document.write("<h3>Name: "+name+"</h3>");
+        document.write("<h3>Condition is "+test+"</h3>");
+        document.write("<h3>Temporary value: "+x+"</h3>");
+        //Print data to console (help you for debug purpose)
+        console.log("data" , data )
+        console.log("Name", name);
+        console.log("Condition" , test );
+        console.log( "X", x);
+        //Checking type of your data
+        //typeof() will return type of your data
+        console.log(data, "it's type is ", typeof(data));
+        console.log(name, "it's type is ", typeof(name));
+        console.log(test, "it's type is ", typeof(test));
+        console.log(x, "it's type is ", typeof(x));
+
+        var obj= {name:"sonam",country:"india"};
+        console.log(obj, "it's type is ", typeof(obj));
+        var arr= [1,2,3,4,5,6,7,8];
+        console.log(arr, "it's type is ", typeof(arr));
+        var news= null;
+        console.log(news, "it's type is ", typeof(news));
+    </script>
+</body>
+</html>

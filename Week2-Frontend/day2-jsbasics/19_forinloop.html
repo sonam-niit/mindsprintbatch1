@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const students = [
+            {
+                id: 1,
+                name: 'alex',
+                email: 'alex@gmail.com',
+                country: 'india'
+            },
+            {
+                id: 2,
+                name: 'bob',
+                email: 'bob@gmail.com',
+                country: 'india'
+            },
+            {
+                id: 3,
+                name: 'cat',
+                email: 'catty@gmail.com',
+                country: 'india'
+            }
+        ]
+        for (let student of students) {
+            console.log("--------------------------------");
+            for (let key in student) {
+                console.log(`${key}: ${student[key]}`);
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var brand="LENOVO"; //global variable
+        function hello(){
+            if(true){
+                var a=10;
+                let b=20;
+                const pi= 3.14;
+                console.log("var ",a);
+                console.log("let ",b);
+                console.log("const ",pi);
+            }
+            console.log("outside if var ",a);
+            console.log("outside if let ",b);
+            console.log("outside if const ",pi);
+        }
+        hello(); //function calling
+    </script>
+</body>
+</html>

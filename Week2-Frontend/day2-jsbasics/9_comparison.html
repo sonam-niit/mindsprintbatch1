@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num1='10'; //String
+        let num2=10; //number
+
+        console.log(num1==num2); //true (value)
+        console.log(num1===num2); //false (value + type)
+
+        let age=Number(prompt('Enter your age'));
+        //ternary
+        let result= age>=18 ? 'Valid for vote' : 'not valid for vote'
+        document.write(`<h3>${result}</h3>`)
+        document.write(56>30?'56 large':'30 is large');
+    </script>
+</body>
+</html>

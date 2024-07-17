@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person={
+            firstName: 'Sonam',
+            lastName: 'soni',
+            email:'sonam@gmail.com',
+            age:56,
+            address:{
+                street:'xyz',
+                city: 'mumbai',
+                zipcode: '345672'
+            },
+            phone:[9876543210,2345678901],
+            display: function(){
+                console.log(`Name: ${this.firstName} ${this.lastName}`); 
+                console.log(`Address: ${this.address.street}, 
+                ${this.address.city},
+            ${this.address.zipcode}`); 
+                console.log(`Personal: ${this.phone[0]}`);
+                console.log(`office: ${this.phone[1]}`);
+            }
+        }
+
+    person.display();
+    console.log(person.age);
+    console.log(person['phone']);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .show{
+            display: block;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <p class="hide" id="data">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint natus dolorum odit quod tempore, deleniti quas nobis? Odit, tempora omnis nam provident, voluptatum fuga corrupti modi, iusto dolores porro sed.</p>
+    <button id="btn" onclick="show()">Show</button>
+    <script>
+        function show(){
+            let btnName=document.getElementById('btn');
+            console.log(btnName.textContent);
+            if(btnName.textContent=='Show'){
+                document.getElementById('data').className='show';
+                btnName.textContent='Hide';
+                return;
+            }
+            if(btnName.textContent=='Hide'){
+                document.getElementById('data').className='hide';
+                btnName.textContent='Show'
+                return;
+            }
+        }
+    </script>
+</body>
+</html>

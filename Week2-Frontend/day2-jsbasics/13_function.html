@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //function declaration
+        function welcome(){
+            console.log('Welcome to MindSprint');
+        }
+        //calling function
+        welcome();
+        //Parameterized function
+        function cube(x){
+            console.log(`Cube of ${x} `,x * x * x);
+        }
+        cube(3);
+        //function can return values
+        function greeting(name){
+            return `Good Noon.. ${name}`
+        }
+        function add(a,b){
+            return a+b;
+        }
+        let res= greeting('Sonam Soni');
+        console.log(res);
+        console.log('Addition ',add(3,4));
+    </script>
+</body>
+</html>

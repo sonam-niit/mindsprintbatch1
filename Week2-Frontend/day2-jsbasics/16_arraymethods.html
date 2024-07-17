@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr=[1,2,3,4,5,6,7];
+        arr.push(10);
+        arr.unshift(20);
+        console.log(arr);
+        console.log(arr.pop()+" removed");
+        console.log(arr.shift()+" removed");
+        console.log(arr);
+        const arr1=[1,2,3];
+        const arr2=[4,5,6];
+        //const newArray= arr1.concat(arr2);
+        const newArray=[...arr1,...arr2];//spread operator
+        console.log(newArray);
+        console.log('Slice: ',newArray.slice(2,5));
+        console.log(newArray);
+        //insert element between 3-4
+        newArray.splice(3,0,10,20);
+        console.log(newArray);
+        newArray.splice(6,1,60); //replacement
+        console.log(newArray);
+        newArray.splice(3,1); //delete
+        console.log(newArray);
+        console.log([1,2,3,1,3,1].indexOf(1));
+        console.log([1,2,3,1,3,8].lastIndexOf(1));
+        console.log(newArray.includes(10));
+    </script>
+</body>
+</html>

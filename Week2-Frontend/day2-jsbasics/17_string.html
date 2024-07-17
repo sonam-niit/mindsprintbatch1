@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const str="sonam soni";
+        console.log(str, str.length);
+        console.log("Char at Index4 ",str.charAt(4));
+        console.log('startsWith',str.startsWith('son'));
+        console.log('endsWith',str.endsWith('soni'));
+        console.log(str.replace('sonam','Ekta'));
+        console.log(str.slice(6));
+        console.log(str.split(' '));
+        console.log(str.split(''));
+        console.log(str.toUpperCase());
+        const str1='        Hello           ';
+        console.log(str1.length, str1.trim().length);
+        const str2='welcome to the world of strings';
+        const arr= str2.split(' ');
+        let res=''
+        for(let x of arr){
+            res= res + x.charAt(0).toUpperCase()+x.slice(1)+' ';
+        }
+        console.log(res);
+        //Question
+        let arr1=["mind","Sprint","pvt","LtD"]
+        console.log(arr1);//["mind","Sprint","pvt","LtD"];
+        for(let i=0;i<arr1.length;i++){
+            arr1[i]= arr1[i].toUpperCase();
+        }
+        console.log(arr1);//["MIND","SPRINT","PVT","LTD"];
+
+        //question: take 5 names from user using prompt
+        //print the names and its length
+        //output
+        //sonam soni: 10
+        //john doe: 8
+        //prince john: 11
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let input1 = prompt('Enter first number');
+        let input2 = prompt('Enter Second Number');
+        //lets convert inputs in number from string
+        //convert using parseInt which skips decimals
+        // let num1= parseInt(input1);
+        // let num2= parseInt(input2);
+        //convert using parseInt which use entire float number
+        // let num1= parseFloat(input1);
+        // let num2= parseFloat(input2);
+        let num1 = Number(input1); //number function
+        let num2 = + input2; //unary operator
+
+        document.write(`${num1} + ${num2} = ${num1+num2}`);
+
+         // let num1= parseInt('56.8abcd'); //it will return 56
+         // let num1= parseFloat('56.8abcd'); //it will return 56.8
+         // let num1= Number('56.8abcd'); //it will return NaN
+         // let num1= + '56.8abcd'; //it will return NaN
+    </script>
+</body>
+</html>
