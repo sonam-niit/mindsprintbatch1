@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="data"></div>
+    <button onclick="getNasa()">Fetch Data From APPI</button>
+    <script>
+        async function getNasa(){
+            try {
+                const resp= await fetch('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY');
+                const json= await resp.json();
+                let html=`
+                    <h1>${json.title}</h1>
+                    <hr><p>${json.explanation}</p>
+                    <img src='${json.url}' alt='${json.title}' height='400'
+                    width='1200' >   
+                    <h4>Date:${json.date}</h4>
+                    <hr>
+                    <h3>Image Copyright: ${json.copyright} </h3>            
+                    `
+                    document.querySelector('#data').innerHTML=html;
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        function usingChain() {
+            const promise = fetch('https://jsonplaceholder.typicode.com/users');
+            promise
+                .then(resp => resp.json())
+                .then(json => console.log(json))
+                .catch(err => console.log(err))
+        }
+        async function fetchData(){
+            try {
+                const resp= await fetch('https://jsonplaceholder.typicode.com/users');
+                const json= await resp.json();
+                console.log(json);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        fetchData();
+    </script>
+</body>
+
+</html>

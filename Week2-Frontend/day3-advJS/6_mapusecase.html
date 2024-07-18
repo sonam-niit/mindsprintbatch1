@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="Enter any Word" id="word"/>
+    <button onclick="iteration()">Check Count</button>
+    <p id="result"></p>
+    <script>
+        function iteration() {
+            const word=document.querySelector('#word').value;
+            const map = new Map();
+            const arr = word.split('');
+            for (let letter of arr) {
+                if (map.has(letter)) {
+                    let count = map.get(letter);
+                    map.set(letter, count + 1);
+                } else {
+                    map.set(letter, 1);
+                }
+            }
+            let html=''
+            for(let entry of map.entries()){
+                html+=`<p>${entry[0]}: ${entry[1]}`
+            }
+            document.querySelector('#result').innerHTML=html
+        }
+
+    </script>  
+</body>
+
+</html>

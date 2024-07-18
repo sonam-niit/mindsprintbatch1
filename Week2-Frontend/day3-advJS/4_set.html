@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const set= new Set([1,2,3,2,1,4,5,3,5]);
+        console.log(set);
+        set.add(10);set.add(10);
+        console.log(set);
+        set.delete(10);
+        console.log(set);
+        console.log("Set Has 5?", set.has(5));
+        const keys= set.keys(); //provide iterator
+        for(let k of keys){
+            console.log(k);
+        }
+        console.log("Size: ",set.size);
+        set.forEach((val)=>console.log(val)); //iterate set directly
+        const entries=set.entries();
+        for(let entry of entries){
+            console.log(`Key: ${entry[0]} Values: ${entry[1]}`);
+        }
+        set.clear();
+        console.log("size",set.size);
+    </script>
+</body>
+</html>

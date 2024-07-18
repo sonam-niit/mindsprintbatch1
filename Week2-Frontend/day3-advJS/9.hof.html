@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=[1,2,3,4,5,6,7,8,9];
+        //Create new array which multiplies all elements by 3
+        const newArray=arr.map((val)=>val*3);
+        console.log(newArray);
+        //filter data based on condition
+        const evenArray= arr.filter(val=>val%2==0);
+        console.log(evenArray);
+        arr= arr.filter(val=> val%3!=0);
+        console.log(arr);
+
+        const findSome= arr.find(val=>val==9);
+        console.log('found',findSome);
+
+        const findSomeIndex= arr.findIndex(val=>val==4);
+        console.log('found',findSomeIndex);
+        arr.forEach(val=>console.log(val));
+        const sum= arr.reduce((acc,curr)=>(acc+curr),0);
+        console.log(sum);
+        const min= arr.reduce((acc,curr)=>(acc>curr?curr:acc),arr[0]);
+        console.log(min);
+    </script>
+</body>
+</html>

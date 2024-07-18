@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const welcome= ()=>console.log('Welcome to mu function');
+        const add= (a,b)=> a+b; //imlicitly return a value
+        const calculat= (a,b)=>{
+            let num1=a+b;
+            let num2=a*b;
+            return num1+num2; //explicit return
+        }
+        welcome();
+        console.log('Addition: ',add(3,4));
+        console.log('Calculate: ',calculat(3,4));
+    </script>
+</body>
+</html>

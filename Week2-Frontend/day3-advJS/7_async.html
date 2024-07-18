@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function f1(){
+            console.log('Function 1 executed');
+        }
+        function f2(){
+            setTimeout(() => {
+                console.log('Function 2 executed');
+            }, 3000);
+            
+        }
+        function f3(){
+            console.log('Function 3 executed');
+        }
+        function f4(){
+            console.log('Function 4 executed');
+        }
+        f1();f2();f3();f4();
+    </script>
+</body>
+</html>

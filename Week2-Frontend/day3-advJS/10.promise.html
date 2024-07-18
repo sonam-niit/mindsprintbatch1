@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const age=17;
+        const promise= new Promise((resolve,reject)=>{
+            if(age>=18){
+                resolve('Valid');
+            }else{
+                reject('not valid');
+            }
+        })
+        promise
+        .then(resp=>resp.toUpperCase())
+        .then(resp=>console.log(resp))
+        .catch(err=>console.log(err))
+        .finally(()=>console.log("Connection closed"))
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Student{
+            constructor(id,name,email,country){
+                this.id=id;
+                this.name=name;
+                this.email=email;
+                this.country=country
+            }
+            display(){
+                console.log('Id: '+this.id);
+                console.log('Name: '+this.name);
+                console.log('Email: '+this.email);
+                console.log('Country: '+this.country);
+            }
+        }
+        const stu1= new Student(1,'Bobby','bob@gmail.com','UK')//calling constructor
+        console.log(stu1);
+        stu1.display() 
+    </script>
+</body>
+</html>
