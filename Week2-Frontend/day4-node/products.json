@@ -1,0 +1,14 @@
+[
+    {
+        "id":1,
+        "name":"Pen",
+        "price":10,
+        "category":"stationary"
+    },
+    {
+        "id":2,
+        "name":"Laptop",
+        "price":45678,
+        "category":"electronics"
+    }
+]
