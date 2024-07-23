@@ -1,19 +1,9 @@
 {
   "users": [
     {
-      "id": "2",
-      "name": "Sonam Soni",
-      "email": "sonam@gmail.com"
-    },
-    {
-      "id": "5",
+      "id": "1",
       "name": "sonam",
       "email": "sonam@gmail.com"
-    },
-    {
-      "id": "8",
-      "name": "sahil",
-      "email": "sahil@gmail.com"
     }
   ]
 }

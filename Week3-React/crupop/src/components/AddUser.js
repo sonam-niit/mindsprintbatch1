@@ -1,13 +1,16 @@
 import { useState } from "react";
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 
 function AddUser() {
+    const navigate=useNavigate();
     const [user,setUser]=useState({id:'',name:'',email:''})
     const handleSubmit=async (e)=>{
         e.preventDefault();
         const resp=await axios.post('http://localhost:3000/users',user);
         if(resp.status==201){
-            alert('User Created')
+            alert('User Created');
+            navigate('/list');
         }else{
             alert('error while creating user')
         }
