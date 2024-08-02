@@ -22,4 +22,14 @@ public class CourseServiceImpl implements CourseService {
     public Course saveCourse(Course course) {
         return courseRepository.save(course);
     }
+    @Override
+    public Course updateCourse(Course course, Long id) {
+        Course oldCourse= courseRepository.findById(id).orElse(null);
+        if(oldCourse!=null){
+            oldCourse.setTitle(course.getTitle());
+            return courseRepository.save(oldCourse);
+        }
+        return  null;
+    }
+
 }
